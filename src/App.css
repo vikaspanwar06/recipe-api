@@ -1,38 +1,259 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.fixed-bg{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #f0f0f0;
+  z-index: 1;
+}
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.banner .img1, .img2, .img3, .img4, .img5{
+  position: absolute;
+}
+
+.img1{
+  left: 0%;
+  bottom: 0%;
+  transform: translate(-30%, 25%);
+}
+
+.img2{
+  right: 0%;
+  top: 0%;
+  transform: translate(12%, -37%);
+  opacity: 0.4;
+}
+
+.img3{
+  left: 12%;
+  top: 55%;
+  transform: translate(-12%, -55%);
+}
+
+.img4{
+  right: 0%;
+  bottom: 0%;
+  transform: translate(28%, 23%);
+}
+
+.img5{
+  right: 4.5%;
+  bottom: 17%;
+}
+
+.common{
+  width: 75%;
+  height: auto;
+  position: relative;
+  margin: 0px auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  z-index: 9 !important;
+}
+
+.header{
+  margin-bottom: 30px;
+}
+
+.header p{
+  font-size: 13px;
+}
+
+.header h1{
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.grid-view{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-view{
+  width: 260px;
+  height: 330px;
+  background: #fff;
+  margin: 10px 5px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 2px 2px 2px #d4cdcd;
+}
+
+.receipe-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.forImg{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, #fff, 90%, transparent);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.forImg h4{
+  margin-top: 10px;
+  padding: 8px 8px 4px 8px;
+}
+
+.price{
+  margin-left: 20px;
+}
+
+.forImg p{
+  padding: 2px 8px 8px 8px;
+  font-size: 15px;
+}
+
+.card-view:nth-of-type(1){
+  background: url('./assets/Images/Img2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(2){
+  background: url('./assets/Images/pkd.jpg');
+  background-position: 0px -20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(3){
+  background: url('./assets/Images/vada.jpg');
+  background-position: 0px -40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(4){
+  background: url('./assets/Images/Img3.jpg');
+  background-position: 0px -100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(5){
+  background: url('./assets/Images/chill.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(6){
+  background: url('./assets/Images/paneer.jpg');
+  background-position: -40px -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(7){
+  background: url('./assets/Images/Img4.jpg');
+  background-position: -40px -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(8){
+  background: url('./assets/Images/Img7.jpg');
+  background-position: 0px -60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(9){
+  background: url('./assets/Images/chicken.jpeg');
+  background-position: -50px -20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-view:nth-of-type(10){
+  background: url('./assets/Images/Img6.jpg');
+  background-position: 0px -120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.next{
+  width: 100%;
+  position: absolute;
   text-align: center;
+  height: 25px;
+  bottom: 0;
+  z-index: 9;
+  background: #f0f0f0;
+  color: #000;
+  font-weight: bold;
+  padding-top: 6px;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media(max-width: 1460px){
+  .common{
+    width: 85%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media(max-width: 1279px){
+  .common{
+    width: 90%;
   }
 }
+
+@media(max-width: 1200px){
+  .common{
+    width: 80%;
+  }
+  .card-view{
+    margin: 10px auto 20px;
+  }
+}
+
+
+.info-page{
+  width: 100%;
+  height: 100Vh;
+  position: relative;
+  background: #d2d2d2;
+}
+
+.info-page h3{
+  position: absolute;
+  width: 50%;
+  margin: 0px auto;
+  left: 50%;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+
